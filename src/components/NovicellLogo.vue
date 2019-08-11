@@ -1,9 +1,8 @@
 <template>
-    <Asset src="https://srv-file1.gofile.io/download/zbfO8Q/Nvcl-Logo.glb" :scaling="[50,50,50]" :position="[0, -1, 0]">
-    <!-- <Material diffuse="#008800"></Material> -->
-    <Material>
+    <Asset src="https://srv-file1.gofile.io/download/zbfO8Q/Nvcl-Logo.glb" :scaling="[scale,scale,50]" :position="[0, -1, 0]">
+    <!-- <Material>
       <Texture src="https://www.babylonjs-playground.com/textures/grass.png"></Texture>
-    </Material>
+    </Material> -->
     </Asset>
 </template>
 
@@ -11,7 +10,8 @@
 
 export default {
   props: {
-    msg: String
+    scale: Number,
+    required: false
   }
 }
 </script>
