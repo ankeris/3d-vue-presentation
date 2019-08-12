@@ -4,6 +4,8 @@
       <img class="logo" alt="Vue logo" src="./assets/logo.png" />
       <router-link to="/">Logo</router-link>
       <router-link to="/about">Build your own</router-link>
+      <router-link to="/loops">Loops</router-link>
+      <router-link to="/entities">Entities</router-link>
     </div>
     <router-view/>
   </div>
@@ -23,6 +25,16 @@
   display: flex;
   align-items: center;
   justify-content:space-between;
+}
+#nav a {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+#nav a:hover {
+  background-color: rgba(0,0,0,0.1);
 }
 .logo {
   width: 45px;
