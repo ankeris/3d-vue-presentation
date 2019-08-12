@@ -3,9 +3,7 @@
     <section>
       <Scene>
       <Camera :position="[0, 3, 18]" :target="[-0.2,1.5,0]" type="free"></Camera>
-      <Entity>
-        <DirectionalLight diffuse="#b3153e" :position="[-10, 15, -5]" :direction="[0,-1,-5]"></DirectionalLight>
-      </Entity>
+      <DirectionalLight diffuse="#b3153e" :position="[-10, 15, -5]" :direction="[0,-1,-5]"></DirectionalLight>
       <Entity :scaling="[1, 1, 1]" :position="[-0.6, 0, 0]">
         <Ground :scaling="[35,1,15]" :rotation="[1.55,0,0]" :position="[0,1,-5]">
           <Material emissive="#fff"></Material>
@@ -19,7 +17,6 @@
           <Novicell :scale="Number(logoScale)"></Novicell>
           <NovicellExtra v-if="showExtra"></NovicellExtra>
         </Entity>
-          <Asset src="https://srv-file1.gofile.io/download/OVE5SY/faceGLTF.gltf" :scaling="[1,1,1]" :position="[0.5, 5.5, -10]"></Asset>
       </Entity>
     </Scene>
     <div class="range-box">

@@ -9,11 +9,11 @@
         <Camera v-model="camera" :position="[-12, 15, 25]" :target="[1, 10, -10]" type="deviceOrientation"></Camera>
         <Asset src="https://srv-file1.gofile.io/download/OVE5SY/faceGLTF.gltf" :scaling="[1,1,1]" :position="[0, 0, -10]"></Asset>
         <Entity>
-          <Asset v-if="picked == '1'" src="https://srv-file4.gofile.io/download/4QtXn2/mustache1.gltf" :scaling="[50,50,50]" :position="[0, 8, -0.5]"></Asset>
-          <Asset v-if="picked == '2'" src="https://srv-file4.gofile.io/download/DaYKum/mustache2.gltf" :scaling="[50,50,50]" :position="[0, 8, -0.5]"></Asset>
-          <Asset v-if="picked == '3'" src="https://srv-file4.gofile.io/download/DaYKum/mustache3.gltf" :scaling="[50,50,50]" :position="[0, 8.5, -0.7]"></Asset>
-          <Asset v-if="picked == '4'" src="https://srv-file4.gofile.io/download/DaYKum/mustache4.gltf" :scaling="[50,50,50]" :position="[0, 8.7, -0.5]"></Asset>
-          <Asset v-if="picked == '5'" src="https://srv-file4.gofile.io/download/DaYKum/mustache5.gltf" :scaling="[50,50,50]" :position="[0, 8.1, -0.9]"></Asset>
+          <Asset v-if="picked == '1'" src="https://srv-file4.gofile.io/download/4QtXn2/mustache1.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8, -0.5]"></Asset>
+          <Asset v-if="picked == '2'" src="https://srv-file4.gofile.io/download/DaYKum/mustache2.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8, -0.5]"></Asset>
+          <Asset v-if="picked == '3'" src="https://srv-file4.gofile.io/download/DaYKum/mustache3.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.5, -0.7]"></Asset>
+          <Asset v-if="picked == '4'" src="https://srv-file4.gofile.io/download/DaYKum/mustache4.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.7, -0.5]"></Asset>
+          <Asset v-if="picked == '5'" src="https://srv-file4.gofile.io/download/DaYKum/mustache5.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.1, -0.9]"></Asset>
         </Entity>
       </Scene>
       <div class="range-box">
@@ -28,6 +28,7 @@
         <label for="five">Moustache 5</label>
         <input v-model="picked" type="radio" name="moustache" id="five" value="5">
       </div>
+      <input type="range" min="0" max="100" step="1" v-model="moustacheSize">
     </section>
   </div>
   
@@ -48,7 +49,8 @@ export default {
     return {
       scene: null,
       picked: "1",
-      camera: null
+      camera: null,
+      moustacheSize: 50
     }
   },
   props: {

@@ -27,4 +27,8 @@
 .logo {
   width: 45px;
 }
+canvas {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
 </style>
