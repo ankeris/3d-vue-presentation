@@ -5,7 +5,7 @@
       <router-link to="/">Logo</router-link>
       <router-link to="/about">Build your own</router-link>
       <router-link to="/loops">Loops</router-link>
-      <router-link to="/entities">Entities</router-link>
+      <router-link to="/movement">Movement</router-link>
     </div>
     <router-view/>
   </div>

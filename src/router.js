@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Logo from './views/Logo.vue'
-import Entities from './views/Entities.vue';
+import Movement from './views/Movement.vue';
 import Loops from './views/Loops.vue';
 
 Vue.use(Router)
@@ -22,9 +22,9 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Moustache.vue')
     },
     {
-      path: '/entities',
-      name: 'Entities',
-      component: Entities
+      path: '/movement',
+      name: 'Movement',
+      component: Movement
     },
     {
       path: '/loops',

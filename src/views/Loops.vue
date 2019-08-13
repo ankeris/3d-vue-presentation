@@ -20,7 +20,10 @@
                 <Nine v-if="number == 9"></Nine>
             </Entity>
         </Scene>
-        <input type="number" v-model="numbersStr">
+        <div class="content-center">
+            <h2>type numbers here: </h2>
+            <input type="number" v-model="numbersStr">
+        </div>
     </section>
 </template>
 
@@ -55,6 +58,10 @@
     }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+    .content-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
