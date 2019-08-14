@@ -1,5 +1,9 @@
 <template>
     <section>
+        <div class="content-center">
+            <h2>type numbers here: </h2>
+            <input type="number" v-model="numbersStr">
+        </div>
         <Scene>
             <Camera v-model="camera" :position="[cameraX, 0, -40]" type="free"></Camera>
             <DirectionalLight diffuse="#b3153e" :position="[10, 15, 5]" :direction="[0,-1,5]"></DirectionalLight>
@@ -8,6 +12,7 @@
                     <Material emissive="#fff"></Material>
                 </Ground>
             </Entity>
+            <!-- :scaling="[5,5,5]" -->
             <Entity v-for="(number, idx) in numbersArr" :position="[idx+idx*8, 0, 0]" :key="idx">
                 <One v-if="number == 1"></One>
                 <Two v-if="number == 2"></Two>
@@ -20,10 +25,6 @@
                 <Nine v-if="number == 9"></Nine>
             </Entity>
         </Scene>
-        <div class="content-center">
-            <h2>type numbers here: </h2>
-            <input type="number" v-model="numbersStr">
-        </div>
     </section>
 </template>
 

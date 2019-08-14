@@ -6,6 +6,7 @@
       <router-link to="/about">Build your own</router-link>
       <router-link to="/loops">Loops</router-link>
       <router-link to="/movement">Movement</router-link>
+      <router-link to="/click-events">Click Events</router-link>
     </div>
     <router-view/>
   </div>

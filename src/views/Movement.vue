@@ -34,17 +34,26 @@ export default {
             scene.onBeforeRenderObservable.add(()=>{
                 if(inputMap["w"] || inputMap["ArrowUp"]){
                     this.positionZ += 0.05;
+                    // console.log('W');
                 } 
                 if(inputMap["a"] || inputMap["ArrowLeft"]){
                     this.positionX -= 0.05;
+                    // console.log('A');
                 } 
                 if(inputMap["s"] || inputMap["ArrowDown"]){
                     this.positionZ -= 0.05;
+                    // console.log('S');
                 } 
                 if(inputMap["d"] || inputMap["ArrowRight"]){
                     this.positionX += 0.05;
+                    // console.log('D');
                 }    
             })
+
+            // window.addEventListener("click", function () {
+            //     var pickResult = scene.pick(scene.pointerX, scene.pointerY);
+            //     console.log(pickResult);
+            // });
         }
     },
 }
