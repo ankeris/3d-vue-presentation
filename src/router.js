@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Logo from './views/Logo.vue'
 import Movement from './views/Movement.vue';
 import Loops from './views/Loops.vue';
-import ClickEvents from './views/ClickEvents.vue';
 
 Vue.use(Router)
 
@@ -31,11 +30,6 @@ export default new Router({
       path: '/loops',
       name: 'Loops',
       component: Loops
-    },
-    {
-      path: '/click-events',
-      name: 'Click Events',
-      component: ClickEvents
     }
   ]
 })

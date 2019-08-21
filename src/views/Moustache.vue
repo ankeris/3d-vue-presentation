@@ -1,19 +1,19 @@
 <template>
   <div class="hello">
     <section>
-      <Scene>
+      <Scene @complete="complete">
         <Property name="autoClear" :any="false"></Property>
         <Property name="autoClearDepthAndStencil" :any="false"></Property>
         <Property name="clearColor" color="#FFF"></Property>
         <DirectionalLight diffuse="#fff" :direction="[1,-1,-3]"></DirectionalLight>
         <Camera v-model="camera" :position="[-12, 15, 25]" :target="[1, 10, -10]" type="deviceOrientation"></Camera>
-        <Asset src="https://srv-file1.gofile.io/download/OVE5SY/faceGLTF.gltf" :scaling="[1,1,1]" :position="[0, 0, -10]"></Asset>
+        <Asset src="/3dFiles/faceGLTF.gltf" :scaling="[1,1,1]" :position="[0, 0, -10]"></Asset>
         <Entity>
-          <Asset v-if="picked == '1'" src="https://srv-file4.gofile.io/download/4QtXn2/mustache1.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8, -0.5]"></Asset>
-          <Asset v-if="picked == '2'" src="https://srv-file4.gofile.io/download/DaYKum/mustache2.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8, -0.5]"></Asset>
-          <Asset v-if="picked == '3'" src="https://srv-file4.gofile.io/download/DaYKum/mustache3.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.5, -0.7]"></Asset>
-          <Asset v-if="picked == '4'" src="https://srv-file4.gofile.io/download/DaYKum/mustache4.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.7, -0.5]"></Asset>
-          <Asset v-if="picked == '5'" src="https://srv-file4.gofile.io/download/DaYKum/mustache5.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.1, -0.9]"></Asset>
+          <Asset v-if="picked == '1'" src="/3dFiles/mustache1.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8, -0.5]"></Asset>
+          <Asset v-if="picked == '2'" src="/3dFiles/mustache2.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8, -0.5]"></Asset>
+          <Asset v-if="picked == '3'" src="/3dFiles/mustache3.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.5, -0.7]"></Asset>
+          <Asset v-if="picked == '4'" src="/3dFiles/mustache4.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.7, -0.5]"></Asset>
+          <Asset v-if="picked == '5'" src="/3dFiles/mustache5.gltf" :scaling="[Number(moustacheSize),Number(moustacheSize),Number(moustacheSize)]" :position="[0, 8.1, -0.9]"></Asset>
         </Entity>
       </Scene>
       <div class="range-box">
@@ -62,19 +62,7 @@ export default {
     camera(e) {
         console.log(e);
     },
-    scene(e) {
-
-    }
-    // sceneComplete({scene}) {
-    //   const sceneN = scene;
-    //   console.log(sceneN);
-      
-    //   // BABYLON.SceneLoader.Append("./", "novicell-logo.obj", scene, function (scene) {
-    //   //   // do something with the scene
-    //   //   console.log(scene);
-    //   // });
-    // }
-  }
+  },
 }
 </script>
 
